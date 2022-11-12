@@ -1,10 +1,14 @@
 import express from 'express';
 
+require("dotenv").config({
+  path: ".env.local",
+});
+
 const app = express();
 const port = process.env.PORT;
 
 app.get("/", async (req, res) => {
-  res.send("Hello world!");
+  res.send("Hello world! ganas");
 });
 
 app.listen(port, () => {
